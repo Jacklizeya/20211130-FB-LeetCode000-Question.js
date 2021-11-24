@@ -29,7 +29,7 @@ var wordBreak = function(s, wordDict) {
         if (possiblePaths) {
                 let qualifiedPath =  possiblePaths.filter(possiblePath => possiblePath === s.substring(currentLocation, currentLocation + possiblePath.length))
                 if (qualifiedPath.length > 0) {
-                    possiblePaths.forEach((possiblePath)=>{
+                    qualifiedPath.forEach((possiblePath)=>{
                         let newPath = [...path]
                         newPath.push(possiblePath)
                         graphTraverse(currentLocation + possiblePath.length, newPath)
