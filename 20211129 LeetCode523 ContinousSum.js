@@ -23,3 +23,28 @@ var checkSubarraySum = function(nums, k) {
 
     return false
 };
+
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {boolean}
+ */
+var checkSubarraySum = function(nums, k) {
+    
+    
+   
+    let hashmap = {}
+    hashmap[0] = -1
+    let cumulativeSum = 0
+    
+    for (let i = 0; i < nums.length; i++) {
+        cumulativeSum = cumulativeSum + nums[i]
+        cumulativeSum = cumulativeSum % k
+        if (hashmap[cumulativeSum] === undefined)  {hashmap[cumulativeSum] = i} else {
+            if (i - hashmap[cumulativeSum] > 1) {return true}}     
+    }
+
+    return false
+};
