@@ -7,7 +7,7 @@ We only need to have a rightPointer, as leftPointer = rightPointer - 3
 Q2
 
 Two pointers based on the assumption all numbers are integer: continuous sum problem
-
+There is some hard Logic here
 
 while (rightPointer < length) {
 if (sum === target) {return true}
